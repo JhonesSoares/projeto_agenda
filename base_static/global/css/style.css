@@ -1,9 +1,9 @@
 :root {
     --spacing: 1.5rem;
-    --link-dark-color: rgb(0, 83, 134);
-    --link-light-color: rgb(156, 217, 255);
+    --link-dark-color: rgb(11, 85, 182);
+    --link-light-color: rgb(226, 224, 224);
     --clr-white: rgb(245, 245, 255);
-    --clr-black: rgb(0, 0, 30);
+    --clr-black: rgb(0, 0, 0);
     --clr-light-gray: rgb(230, 230, 245);
     --clr-dark-shadow-5: rgba(0, 0, 10, 5%);
     --clr-dark-shadow-10: rgba(0, 0, 10, 10%);
@@ -125,6 +125,7 @@
     font-size: var(--medium-font-size);
     font-weight: bold;
     padding: var(--spacing);
+    text-align: left;
   }
   
   .table-row {
@@ -207,7 +208,7 @@
     width: 100%;
     max-width: 32rem;
     border-radius: var(--default-border-radius);
-    border: 1px solid var(--link-light-color);
+    border: 2px solid rgb(75, 74, 74);
   }
   
   .search-input:focus {

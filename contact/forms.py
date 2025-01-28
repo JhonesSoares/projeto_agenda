@@ -9,15 +9,12 @@ from . import models
 class ContactForm(forms.ModelForm):
 
     first_name = forms.CharField(
-        widget=forms.TextInput(
-            attrs={
-                'class': 'classe-a classe-b',
-                'placeholder': 'Aqui veio do init',
-            }
-        ),
-        label='Primeiro Nome',
-        help_text='Texto de ajuda para seu usuário',
+        widget=forms.TextInput(attrs={'class': 'classe-a classe-b',}),
+        label='Nome',
     )
+    last_name = forms.CharField(label='Sobrenome')
+    phone = forms.CharField(label='Telefone')
+    
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
