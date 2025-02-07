@@ -1,14 +1,13 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
-
+# id (primary key - automático)
 # first_name (string), last_name (string), phone (string)
 # email (email), created_date (date), description (text)
+# category (foreign key), show (boolean), picture (imagem)
+# owner (foreign key)
 
-# Depois
-# category (foreign key), show (boolean), owner (foreign key)
-# picture (imagem)
 
 class Category(models.Model):
     class Meta:
@@ -19,6 +18,7 @@ class Category(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
 
 class Contact(models.Model):
     first_name = models.CharField(max_length=50)
@@ -31,6 +31,11 @@ class Contact(models.Model):
     picture = models.ImageField(blank=True, upload_to='pictures/%Y/%m/')
     category = models.ForeignKey(
         Category,
+        on_delete=models.SET_NULL,
+        blank=True, null=True
+    )
+    owner = models.ForeignKey(
+        User,
         on_delete=models.SET_NULL,
         blank=True, null=True
     )
