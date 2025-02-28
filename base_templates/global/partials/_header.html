@@ -10,10 +10,10 @@
 
       {% if user.is_authenticated %}
         <li class="menu-item">
-          <a href="{% url 'contact:create' %}" class="menu-link">Create</a>
+          <a href="{% url 'contact:create' %}" class="menu-link">Criar Contato</a>
         </li>
         <li class="menu-item">
-          <a href="{% url 'contact:user_update' %}" class="menu-link">Profile</a>
+          <a href="{% url 'contact:user_update' %}" class="menu-link">Atualizar Dados</a>
         </li>
         <li class="menu-item">
           <a href="{% url 'contact:logout' %}" class="menu-link">Logout</a>
@@ -23,7 +23,7 @@
           <a href="{% url 'contact:login' %}" class="menu-link">Login</a>
         </li>      
         <li class="menu-item">
-          <a href="{% url 'contact:register' %}" class="menu-link">Register</a>
+          <a href="{% url 'contact:register' %}" class="menu-link">Cadastrar</a>
         </li>      
       {% endif %}
     
@@ -38,7 +38,7 @@
       <input 
         type="search" 
         class="search-input"
-        placeholder="Search"
+        placeholder="Buscar"
         id="search"
         name="q"
         value="{{ request.GET.q.strip }}"
